@@ -31,7 +31,7 @@ products.forEach((product) => {
           </div>
 
           <div class="product-price">
-            ${product.priceCents / 100}
+            ${(product.priceCents / 100).toFixed(2)}
           </div>
 
           <div class="product-quantity-container">
@@ -56,7 +56,7 @@ products.forEach((product) => {
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary">
+          <button class="add-to-cart-button button-primary  js-add-to-cart-btn">
             Add to Cart
           </button>
         </div>`
@@ -64,7 +64,19 @@ products.forEach((product) => {
     // console.log(html);
 })
 
-console.log(productHTML);
+// console.log(productHTML);
 
 
 document.querySelector('.js-product-container').innerHTML = productHTML;
+
+//make it interactive
+
+// console.log(document.querySelectorAll('.js-add-to-cart-btn'));  //get all the button element  and down looping to get button element
+document.querySelectorAll('.js-add-to-cart-btn')
+.forEach((button) =>
+{
+    // console.log(button);
+    button.addEventListener('click', ()=>{
+    
+    })
+})
