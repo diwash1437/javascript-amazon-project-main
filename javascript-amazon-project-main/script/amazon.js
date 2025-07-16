@@ -113,6 +113,8 @@ document.querySelectorAll('.js-add-to-cart-btn')
        })
        console.log(totalquantity);
 
+       document.querySelector('.js-cart-quantity').innerHTML = totalquantity;
+
 
 
     })
